@@ -8,14 +8,28 @@
     "gatsby"
   ],
   "scripts": {
+    "dev": "gatsby develop --host 0.0.0.0 --port 8016",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "imports": {
+    "#root/*": {
+      "default": "./*"
+    },
+    "#elements/*": {
+      "default": "./src/elements/*"
+    },
+    "#tool/*": {
+      "default": "./src/components/tool/*"
+    }
+  },
   "dependencies": {
+    "@fontsource/fira-code": "^5.0.18",
     "@mdx-js/react": "^3.0.1",
+    "@react-icons/all-files": "^4.1.0",
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.5",
     "gatsby-plugin-image": "^3.13.1",
@@ -24,8 +38,11 @@
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
     "gatsby-plugin-styled-components": "^6.13.1",
+    "gatsby-remark-images": "^7.13.1",
+    "gatsby-remark-relative-images-v2": "^0.1.5",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "prism-react-renderer": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.12"
